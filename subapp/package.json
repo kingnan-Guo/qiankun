@@ -24,6 +24,9 @@
     "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
+    "globals": {
+      "_webpack_public_path_": true
+    },
     "root": true,
     "env": {
       "node": true

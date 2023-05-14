@@ -1,9 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
 
 const packageName = require('./package.json').name
+
+process.env.NODE_ENV = 'development'
 module.exports = defineConfig({
+  // mode: 'development',
   transpileDependencies: true,
-  // publicPath: 'http://localhost:7200',
+  publicPath: 'http://localhost:7200',
+  // publicPath: 'auto', //在 vueCli 中通过这种方式设置publicPath
   configureWebpack: {
     // 必须打包出一个 库文件 格式为 umd
     output:{

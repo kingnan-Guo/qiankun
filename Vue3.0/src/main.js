@@ -9,7 +9,7 @@ import router from "./router/index.js";
 
 // import { loadMicroApp, registerMicroApps, start } from 'qiankun';
 import {  registerMicroApps, start } from 'qiankun';
-
+// import {  registerMicroApps, start } from './common/micro-app';
 // console.log("loadMicroApp", loadMicroApp);
 
 // console.log("window", window);
@@ -38,7 +38,7 @@ app.use(router);
 app.mount("#app");
 
 
-console.log("registerMicroApps", registerMicroApps);
+// console.log("registerMicroApps", registerMicroApps);
 // 注册子应用
 // 微前端运行原理与 SPA 非常相似
 registerMicroApps(
@@ -46,7 +46,7 @@ registerMicroApps(
   [
     {
       name: 'vue-subapp',
-      entry: '//127.0.0.1:7200/',
+      entry: '//127.0.0.1:7200',
       container: '#subapp-container',
       activeRule: '/vue-children',
       props: {
@@ -60,5 +60,9 @@ registerMicroApps(
   },
 );
 
-start();
+start({
+  sandbox:{
+    strictStyleIsolation: true, //使用 shadow dom 解决样式冲突
+  }
+});
 
