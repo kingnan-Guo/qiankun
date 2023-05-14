@@ -12,6 +12,7 @@
     <div class="view">
       <router-view/>
     </div>
+    <img src="@/assets/asd.jpg" alt="" style="width: 200px;height: 200px;">
 
   </div>
   <!-- <router-view/> -->

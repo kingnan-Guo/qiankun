@@ -1,5 +1,9 @@
 <template>
-    <div>subapp children</div>
+    <div>
+        <div>subapp children</div>
+        <!-- <img src="@/assets/asd.jpg" alt="" style="width: 200px;height: 200px;"> -->
+
+    </div>
 </template>
 <script>
 import { ref, onMounted } from "vue";

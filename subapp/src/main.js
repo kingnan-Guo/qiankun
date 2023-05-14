@@ -6,6 +6,8 @@ import { createApp} from "vue";
 import App from "./App.vue";
 import CreateRouter from "./router/index.js";
 
+import  "./public-path.js";
+
 
 // vue2 ---------------
 // let instance = null
@@ -66,9 +68,9 @@ function render(props) {
 if (!window.__POWERED_BY_QIANKUN__) {
     render({});
 }
-if (window.__POWERED_BY_QIANKUN__) {
-    window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
-}
+// if (window.__POWERED_BY_QIANKUN__) {
+//     window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+// }
 
 
 // 导出三个必要的生命周期 钩子函数
